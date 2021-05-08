@@ -1,0 +1,18 @@
+[
+  {
+    "modid": "CommunityMod",
+    "name": "CommunityMod",
+    "description": "A mod i coded with my Community",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "pepe44.dev",
+    "updateUrl": "",
+    "authorList": [
+      "Pepe44DEV"
+    ],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
