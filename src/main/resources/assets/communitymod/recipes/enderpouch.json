@@ -1,0 +1,26 @@
+{
+  "result":{
+    "item": "enderpouch"
+  },
+  "pattern":[
+    "xmx",
+    "mom",
+    "xmx"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "x": {
+      "item": "minecraft:leather"
+    },
+    "m": {
+      "item": "minecraft:obsidian"
+    },
+    "o": {
+      "item": "minecraft:ender_eye"
+    }
+  }
+
+
+
+
+}

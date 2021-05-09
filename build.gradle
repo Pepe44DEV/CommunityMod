@@ -109,3 +109,10 @@ jar {
 }
 
 jar.finalizedBy('reobfJar')
+
+sourceSets {
+    main {
+        output.resourcesDir = file('build/combined')
+        java.outputDir = file('build/combined')
+    }
+}

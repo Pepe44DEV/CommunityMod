@@ -2,9 +2,8 @@ package dev.pepe44.communitymod.items;
 
 import dev.pepe44.communitymod.CommunityMod;
 import dev.pepe44.communitymod.CommunityModConstants;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.InventoryEnderChest;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -24,6 +23,7 @@ public class ItemEnderPouch extends Item {
         InventoryEnderChest inventoryEnderChest = p.getInventoryEnderChest();
         if(!(p.isSneaking())) {
             p.displayGUIChest(inventoryEnderChest);
+            p.playSound(SoundEvents.ENTITY_ENDERMEN_TELEPORT, 1, 0);
         }else {
 
         }
