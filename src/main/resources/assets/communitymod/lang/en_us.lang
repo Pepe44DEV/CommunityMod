@@ -1,6 +1,9 @@
-itemGroup.commtab=CommunityMod
-
+itemGroup.commtabi=CommunityMod Items
+itemGroup.commtabb=CommunityMod Blocks
 
 #Items
 item.communitymod.enderpouch.name=Enderpouch
-item.communitymod.dragonring.name=DragonRing
+item.communitymod.dragonring.name=Dragon Ring
+
+#Blocks
+tile.communitymod.fountain.name=Fountain

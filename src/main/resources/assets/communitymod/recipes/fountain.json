@@ -1,0 +1,31 @@
+{
+  "result":{
+    "item": "fountain_block"
+  },
+  "pattern":[
+    "xxx",
+    "mom",
+    "fff"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "x": {
+      "item": "minecraft:stone",
+      "data" : 1
+    },
+    "m": {
+      "item": "minecraft:log",
+      "data" : 2
+    },
+    "o": {
+      "item": "minecraft:water_bucket"
+    },
+    "f": {
+      "item": "minecraft:cobblestone"
+    }
+  }
+
+
+
+
+}

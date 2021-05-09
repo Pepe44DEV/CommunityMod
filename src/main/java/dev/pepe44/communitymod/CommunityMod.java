@@ -1,5 +1,6 @@
 package dev.pepe44.communitymod;
 
+import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -25,10 +26,16 @@ public class CommunityMod {
         return instance;
     }
 
-    public static CreativeTabs creativeTabs = new CreativeTabs("commtab") {
+    public static CreativeTabs creativeTabi= new CreativeTabs("commtabi") {
         @Override
         public ItemStack createIcon() {
             return new ItemStack(Items.FLINT_AND_STEEL);
+        }
+    };
+    public static CreativeTabs creativeTabb = new CreativeTabs("commtabb") {
+        @Override
+        public ItemStack createIcon() {
+            return new ItemStack(Items.COMMAND_BLOCK_MINECART);
         }
     };
 

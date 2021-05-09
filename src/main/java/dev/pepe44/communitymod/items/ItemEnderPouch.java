@@ -16,7 +16,7 @@ public class ItemEnderPouch extends Item {
 
     public ItemEnderPouch() {
         setTranslationKey(CommunityModConstants.MODID + ".enderpouch");
-        setCreativeTab(CommunityMod.creativeTabs);
+        setCreativeTab(CommunityMod.creativeTabi);
     }
 
     public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer p, EnumHand hand) {
