@@ -1,0 +1,26 @@
+{
+  "result":{
+    "item": "dragonring"
+  },
+  "pattern":[
+    "xmx",
+    "mom",
+    "xmx"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "x": {
+      "item": "minecraft:gold_ingot"
+    },
+    "m": {
+      "item": "minecraft:diamond"
+    },
+    "o": {
+      "item": "minecraft:nether_star"
+    }
+  }
+
+
+
+
+}
