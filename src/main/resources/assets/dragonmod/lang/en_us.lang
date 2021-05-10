@@ -1,0 +1,14 @@
+itemGroup.commtabi=CommunityMod Items
+itemGroup.commtabb=CommunityMod Blocks
+
+#Items
+item.dragonmod.enderpouch.name=Enderpouch
+item.dragonmod.dragonring.name=Dragon Ring
+item.dragonmod.dragonsword.name=Dragon Sword
+
+
+#Blocks
+tile.dragonmod.fountain.name=Fountain
+
+#Entities
+entity.nightshade.name=Nightshade

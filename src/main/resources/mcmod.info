@@ -1,7 +1,7 @@
 [
   {
-    "modid": "CommunityMod",
-    "name": "CommunityMod",
+    "modid": "dragonTime",
+    "name": "Dragon Time",
     "description": "A mod i coded with my Community",
     "version": "${version}",
     "mcversion": "${mcversion}",
