@@ -1,8 +1,6 @@
 package dev.pepe44.dragonmod.entities;
 
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityAgeable;
-import net.minecraft.entity.boss.EntityDragon;
 import net.minecraft.entity.passive.EntityHorse;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
@@ -12,6 +10,7 @@ public class EntityNightshade extends EntityHorse {
 
     public EntityNightshade(World world) {
         super(world);
+        //this.noClip = true;
     }
 
     @Override
@@ -33,5 +32,10 @@ public class EntityNightshade extends EntityHorse {
     @Override
     protected SoundEvent getDeathSound() {
         return super.getDeathSound();
+    }
+
+    protected boolean canTriggerWalking()
+    {
+        return true;
     }
 }
