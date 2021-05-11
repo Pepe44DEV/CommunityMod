@@ -5,6 +5,7 @@ itemGroup.commtabb=CommunityMod Blocks
 item.dragonmod.enderpouch.name=Enderpouch
 item.dragonmod.dragonring.name=Dragon Ring
 item.dragonmod.dragonsword.name=Dragon Sword
+item.dragonmod.dragonscalearmor.name=Dragon Scale Armor
 
 
 #Blocks
@@ -12,3 +13,7 @@ tile.dragonmod.fountain.name=Fountain
 
 #Entities
 entity.nightshade.name=Nightshade
+
+#tooltips
+dragontime.dragonscale.tooltip=§cProtect you from Fire.
+dragontime.dragonsword.tooltip=§l§4Ignites Enemies on hit...

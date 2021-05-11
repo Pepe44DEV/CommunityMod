@@ -55,7 +55,7 @@ public class DragonMod {
         EntityInit.registerEntities();
         RenderHandler.registerEntityRenders();
         dragon = EnumHelper.addToolMaterial("dragonite", 4, 10000, 20.0f, 12, 30);
-        dragonscale = EnumHelper.addArmorMaterial(MODID + ":textures/models/armor/dragonscale", MODID + ":" + "dragon_scales",1000, new int[]{2, 5, 6, 3}, 30, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0f);
+        dragonscale = EnumHelper.addArmorMaterial(MODID + ":textures/models/armor/dragonscale", MODID + ":" + "dragon_scales",1000, new int[]{4, 7, 9, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 12.0f);
     }
 
 

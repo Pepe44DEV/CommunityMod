@@ -10,11 +10,13 @@ import dev.pepe44.dragonmod.items.ItemEnderPouch;
 import dev.pepe44.dragonmod.items.armor.ArmorDragonScale;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.potion.PotionEffect;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
@@ -22,6 +24,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
+import org.lwjgl.Sys;
 
 import javax.annotation.Nonnull;
 
@@ -73,7 +76,7 @@ public class RegistryHandler {
 
 
     @SubscribeEvent
-    public static void onTick(TickEvent.PlayerTickEvent e) {
+    public static void dragonTick(TickEvent.PlayerTickEvent e) {
        if (!(e.player.capabilities.isCreativeMode)) {
            if(e.player.getHeldItemOffhand().getItem().equals(dragonRing)){
                e.player.capabilities.allowFlying = true;
@@ -82,6 +85,18 @@ public class RegistryHandler {
                e.player.capabilities.isFlying = false;
            }
        }
+
+    }
+
+    @SubscribeEvent
+    public static void checkArmor(TickEvent.PlayerTickEvent e) {
+        if (!(e.player.capabilities.isCreativeMode)) {
+            if(e.player.inventory.armorItemInSlot(3).getItem().equals(dragonscale_helmet) && e.player.inventory.armorItemInSlot(2).getItem().equals(dragonscale_chestplate) && e.player.inventory.armorItemInSlot(1).getItem().equals(dragonscale_leggings) && e.player.inventory.armorItemInSlot(0).getItem().equals(dragonscale_boots)){
+                e.player.addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, 10, 2, false, false));
+            }else {
+                e.player.removePotionEffect(MobEffects.FIRE_RESISTANCE);
+            }
+        }
 
     }
 
