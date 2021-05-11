@@ -7,13 +7,11 @@ import net.minecraft.init.MobEffects;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.math.MathHelper;
-import net.minecraftforge.event.entity.living.LivingAttackEvent;
-import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.living.LivingFallEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
-import org.lwjgl.Sys;
 import org.lwjgl.input.Keyboard;
 
 import static dev.pepe44.dragonmod.init.ObjectsHolder.*;
@@ -47,6 +45,14 @@ public class EventHandler {
 
     }
 
+    @SubscribeEvent
+    public static void dissableFallDamage(TickEvent.PlayerTickEvent e) {
+        if (e.player.isRiding() && e.player.getRidingEntity() instanceof EntityNightshade) {
+            EntityNightshade nightshade = (EntityNightshade)  e.player.getRidingEntity();
+            nightshade.fallDistance = 0.0F;
+        }
+    }
+
 
     @SubscribeEvent
     public static void checkPlayerisJumping(TickEvent.PlayerTickEvent e) {
@@ -57,8 +63,8 @@ public class EventHandler {
             {
                 float f = MathHelper.sin(nightshade.rotationYaw * 0.017453292F);
                 float f1 = MathHelper.cos(nightshade.rotationYaw * 0.017453292F);
-                nightshade.motionX += (double)(-0.4F * f);
-                nightshade.motionZ += (double)(0.4F * f1);
+                nightshade.motionX += (double)(-0.1F * f);
+                nightshade.motionZ += (double)(0.1F * f1);
             }
 
         }

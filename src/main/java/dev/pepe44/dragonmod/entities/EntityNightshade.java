@@ -11,6 +11,7 @@ public class EntityNightshade extends EntityHorse {
     public EntityNightshade(World world) {
         super(world);
         //this.noClip = true;
+        this.fallDistance = 0.0f;
     }
 
     @Override

@@ -20,7 +20,7 @@ public class BlockFountain extends Block {
     public final AxisAlignedBB FOUNTAIN = new AxisAlignedBB(0.1875D, 0, 0.1875D, 0.1825D, 0.8125D, 0.8125D);
 
     public BlockFountain() {
-        super(Material.WATER);
+        super(Material.ROCK);
         setTranslationKey(DragonModConstants.MODID + ".fountain");
         setCreativeTab(DragonMod.creativeTabb);
     }
