@@ -280,6 +280,8 @@ public class ModelNightshade extends ModelBase {
         this.field_110722_x.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
         this.field_110721_y.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
         this.field_110720_z.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
+        this.shape42.rotateAngleZ = MathHelper.cos(limbSwing * 0.6652F) * 0.5F * limbSwingAmount;
+        this.shape42_1.rotateAngleZ = MathHelper.cos(limbSwing * 0.0F) + 220F * limbSwingAmount;
 
     }
 }
