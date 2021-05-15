@@ -8,6 +8,9 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -17,14 +20,17 @@ import static dev.pepe44.dragonmod.DragonMod.dragon;
 
 public class ItemDragonSword extends ItemSword {
 
-
-
     public ItemDragonSword() {
-        super(dragon);
+        this(dragon);
+        //super(dragon);
         setTranslationKey(DragonModConstants.MODID + ".dragonsword");
         setCreativeTab(DragonMod.creativeTabi);
         setMaxDamage(100);
 
+    }
+
+    public ItemDragonSword(ToolMaterial material) {
+        super(material);
     }
 
     @Override

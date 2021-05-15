@@ -19,6 +19,9 @@ public class ObjectsHolder {
     public static final ArmorDragonScale dragonscale_chestplate = null;
     public static final ArmorDragonScale dragonscale_leggings = null;
     public static final ArmorDragonScale dragonscale_boots = null;
+    public static final ItemDragonBook dragonbook = null;
+    public static final ItemBackpack backpack = null;
+    public static final FlySuite flysuite = null;
 
 
 }

@@ -12,13 +12,14 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.input.Keyboard;
 
 import static dev.pepe44.dragonmod.init.ObjectsHolder.*;
 
 @Mod.EventBusSubscriber
 public class EventHandler {
-
     @SubscribeEvent
     public static void checkOffhand(TickEvent.PlayerTickEvent e) {
         if (!(e.player.capabilities.isCreativeMode)) {
@@ -33,6 +34,31 @@ public class EventHandler {
     }
 
 
+    @SideOnly(Side.CLIENT)
+    @SubscribeEvent
+    public static void checkflywings(TickEvent.PlayerTickEvent e) {
+        if (!(e.player.capabilities.isCreativeMode)) {
+            if(e.player.inventory.armorItemInSlot(2).getItem().equals(flysuite)) {
+                if (e.player.isSneaking() ) {
+                    e.player.setInWeb();
+                    if (Keyboard.isKeyDown(Keyboard.KEY_W)){
+                        float f = MathHelper.sin(e.player.rotationYaw * 0.017453293F);
+                        float f1 = MathHelper.cos(e.player.rotationYaw * 0.017453293F);
+                        e.player.motionX += (double)(-0.65F * f);
+                        e.player.motionZ += (double)(0.65F * f1);
+                        e.player.motionY -= 0.3F;
+
+                    }
+                } else {
+
+                }
+            }
+        }
+
+    }
+
+
+    @SideOnly(Side.CLIENT)
     @SubscribeEvent
     public static void checkArmor(TickEvent.PlayerTickEvent e) {
         if (!(e.player.capabilities.isCreativeMode)) {
@@ -45,6 +71,8 @@ public class EventHandler {
 
     }
 
+
+    //@SideOnly(Side.CLIENT)
     @SubscribeEvent
     public static void dissableFallDamage(TickEvent.PlayerTickEvent e) {
         if (e.player.isRiding() && e.player.getRidingEntity() instanceof EntityNightshade) {
@@ -53,7 +81,7 @@ public class EventHandler {
         }
     }
 
-
+    @SideOnly(Side.CLIENT)
     @SubscribeEvent
     public static void checkPlayerisJumping(TickEvent.PlayerTickEvent e) {
         if (Keyboard.isKeyDown(Keyboard.KEY_SPACE) && e.player.isRiding() && e.player.getRidingEntity() instanceof EntityNightshade) {

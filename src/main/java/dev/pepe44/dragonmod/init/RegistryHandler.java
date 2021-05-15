@@ -28,6 +28,8 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.Sys;
 
 import javax.annotation.Nonnull;
@@ -55,6 +57,10 @@ public class RegistryHandler {
         event.getRegistry().register(new ArmorDragonScale(DragonMod.dragonscale, EntityEquipmentSlot.CHEST).setRegistryName(DragonModConstants.MODID, "dragonscale_chestplate"));
         event.getRegistry().register(new ArmorDragonScale(DragonMod.dragonscale, EntityEquipmentSlot.LEGS).setRegistryName(DragonModConstants.MODID, "dragonscale_leggings"));
         event.getRegistry().register(new ArmorDragonScale(DragonMod.dragonscale, EntityEquipmentSlot.FEET).setRegistryName(DragonModConstants.MODID, "dragonscale_boots"));
+        event.getRegistry().register(new ItemDragonBook().setRegistryName(DragonModConstants.MODID, "dragonbook"));
+        event.getRegistry().register(new ItemBackpack().setRegistryName(DragonModConstants.MODID, "backpack"));
+        event.getRegistry().register(new FlySuite (DragonMod.wings, EntityEquipmentSlot.CHEST).setRegistryName(DragonModConstants.MODID, "flysuite"));
+
     }
 
 
@@ -69,14 +75,7 @@ public class RegistryHandler {
     @SubscribeEvent
     public static void addRecipes(RegistryEvent.Register<IRecipe> event) {
         //GameRegistry.addSmelting(Blocks.COAL_BLOCK, new ItemStack(Items.DIAMOND, 1), 10);
-
-
     }
-
-
-
-
-
 
 
 }
