@@ -3,16 +3,13 @@ package dev.pepe44.dragonmod.items;
 import dev.pepe44.dragonmod.DragonMod;
 import dev.pepe44.dragonmod.DragonModConstants;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
-import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.World;
-import net.minecraftforge.common.capabilities.ICapabilityProvider;
-import net.minecraftforge.common.property.Properties;
+
 
 import javax.annotation.Nullable;
 
