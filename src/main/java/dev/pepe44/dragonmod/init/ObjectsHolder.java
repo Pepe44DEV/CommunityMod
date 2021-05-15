@@ -2,11 +2,9 @@ package dev.pepe44.dragonmod.init;
 
 import dev.pepe44.dragonmod.DragonModConstants;
 import dev.pepe44.dragonmod.blocks.BlockFountain;
-import dev.pepe44.dragonmod.items.ItemDragonBook;
-import dev.pepe44.dragonmod.items.ItemDragonRing;
-import dev.pepe44.dragonmod.items.ItemDragonSword;
-import dev.pepe44.dragonmod.items.ItemEnderPouch;
+import dev.pepe44.dragonmod.items.*;
 import dev.pepe44.dragonmod.items.armor.ArmorDragonScale;
+import dev.pepe44.dragonmod.items.armor.FlySuite;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @GameRegistry.ObjectHolder(DragonModConstants.MODID)

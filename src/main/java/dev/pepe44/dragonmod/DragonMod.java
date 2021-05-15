@@ -23,6 +23,8 @@ import static dev.pepe44.dragonmod.DragonModConstants.*;
 public class DragonMod {
     public static Item.ToolMaterial dragon;
     public static ItemArmor.ArmorMaterial dragonscale;
+    public static ItemArmor.ArmorMaterial wings;
+
 
 
     @Mod.Instance
