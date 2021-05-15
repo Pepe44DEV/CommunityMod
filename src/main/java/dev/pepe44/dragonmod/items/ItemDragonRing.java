@@ -12,6 +12,7 @@ public class ItemDragonRing extends Item {
     public ItemDragonRing() {
         setTranslationKey(DragonModConstants.MODID + ".dragonring");
         setCreativeTab(DragonMod.creativeTabi);
+
     }
 
 

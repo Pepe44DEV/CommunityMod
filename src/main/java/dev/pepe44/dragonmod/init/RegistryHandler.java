@@ -4,6 +4,7 @@ package dev.pepe44.dragonmod.init;
 import dev.pepe44.dragonmod.DragonMod;
 import dev.pepe44.dragonmod.DragonModConstants;
 import dev.pepe44.dragonmod.blocks.BlockFountain;
+import dev.pepe44.dragonmod.items.ItemDragonBook;
 import dev.pepe44.dragonmod.items.ItemDragonRing;
 import dev.pepe44.dragonmod.items.ItemDragonSword;
 import dev.pepe44.dragonmod.items.ItemEnderPouch;
