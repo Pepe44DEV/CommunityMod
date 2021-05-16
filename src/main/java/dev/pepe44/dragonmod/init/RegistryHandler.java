@@ -4,36 +4,27 @@ package dev.pepe44.dragonmod.init;
 import dev.pepe44.dragonmod.DragonMod;
 import dev.pepe44.dragonmod.DragonModConstants;
 import dev.pepe44.dragonmod.blocks.BlockFountain;
+import dev.pepe44.dragonmod.commands.CommandTeleportDimension;
 import dev.pepe44.dragonmod.items.*;
 import dev.pepe44.dragonmod.items.armor.ArmorDragonScale;
 import dev.pepe44.dragonmod.items.armor.FlySuite;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
-import net.minecraft.potion.PotionEffect;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.gameevent.TickEvent;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
-import org.lwjgl.Sys;
 
 import javax.annotation.Nonnull;
 
 import static dev.pepe44.dragonmod.init.ObjectsHolder.*;
-import static net.minecraft.item.Item.*;
 
 @Mod.EventBusSubscriber
 public class RegistryHandler {
@@ -75,5 +66,9 @@ public class RegistryHandler {
         //GameRegistry.addSmelting(Blocks.COAL_BLOCK, new ItemStack(Items.DIAMOND, 1), 10);
     }
 
+    public static void serverRegistries(FMLServerStartingEvent event)
+    {
+        event.registerServerCommand(new CommandTeleportDimension());
+    }
 
 }
