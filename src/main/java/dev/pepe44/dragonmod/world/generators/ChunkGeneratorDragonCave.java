@@ -6,6 +6,8 @@ import java.util.Random;
 import javax.annotation.Nullable;
 
 import dev.pepe44.dragonmod.init.BiomeInit;
+import dev.pepe44.dragonmod.init.ObjectsHolder;
+import dev.pepe44.dragonmod.init.RegistryHandler;
 import net.minecraft.block.BlockFalling;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -38,7 +40,7 @@ public class ChunkGeneratorDragonCave implements IChunkGenerator {
     protected static final IBlockState BEDROCK = Blocks.BEDROCK.getDefaultState();
 
     //Block that is usually Netherrack
-    protected static final IBlockState MAIN_BLOCK = Blocks.STONE.getDefaultState();
+    protected static final IBlockState MAIN_BLOCK = ObjectsHolder.cavestone.getDefaultState();
     //Block that is usally Lava
     protected static final IBlockState YOUR_LIQUID = Blocks.WATER.getDefaultState();
     //Blocks that are usally gravel and soul sand
@@ -53,19 +55,8 @@ public class ChunkGeneratorDragonCave implements IChunkGenerator {
     private NoiseGeneratorOctaves lperlinNoise1, lperlinNoise2, perlinNoise1, slowsandGravelNoiseGen, netherrackExculsivityNoiseGen, scaleNoise, depthNoise;
     double[] pnr, ar, br, dr, noiseData4;
 
-    /* Any Structures you want - These are all of the Nether Ones
-    private final WorldGenFire fireFeature = new WorldGenFire();
-    private final WorldGenGlowStone1 lightGemGen = new WorldGenGlowStone1();
-    private final WorldGenGlowStone2 hellPortalGen = new WorldGenGlowStone2();
-    private final WorldGenerator quartzGen = new WorldGenMinable(Blocks.QUARTZ_ORE.getDefaultState(), 14, BlockMatcher.forBlock(Blocks.COPPER_BLOCK));
-    private final WorldGenerator magmaGen = new WorldGenMinable(Blocks.MAGMA.getDefaultState(), 33, BlockMatcher.forBlock(Blocks.COPPER_BLOCK));
-    private final WorldGenBush brownMushroomFeature = new WorldGenBush(Blocks.BROWN_MUSHROOM);
-    private final WorldGenBush redMushroomFeature = new WorldGenBush(Blocks.RED_MUSHROOM);
-    private MapGenNetherBridge genNetherBridge = new MapGenNetherBridge();
-    */
-    //private final WorldGenStructure HOUSE = new WorldGenStructure("House");
+
     private MapGenBase genNetherCaves = new MapGenCavesHell();
-    private final WorldGenHellLava hellSpringGen = new WorldGenHellLava(Blocks.FLOWING_WATER, false);
 
     public ChunkGeneratorDragonCave(World world, boolean generate, long seed)
     {
@@ -267,12 +258,8 @@ public class ChunkGeneratorDragonCave implements IChunkGenerator {
         this.prepareHeights(x, z, chunkprimer);
         this.buildSurfaces(x, z, chunkprimer);
 
-        //Keep this - This makes all the holes and stuff in the nether - IT IS NEEDED!
         this.genNetherCaves.generate(this.world, x, z, chunkprimer);
 
-        if (this.generateStructures)
-        {
-        }
 
         Chunk chunk = new Chunk(this.world, chunkprimer, x, z);
         byte[] abyte = chunk.getBiomeArray();
@@ -383,10 +370,10 @@ public class ChunkGeneratorDragonCave implements IChunkGenerator {
         Biome biome = this.world.getBiome(blockpos.add(16, 0, 16));
         ChunkPos chunkpos = new ChunkPos(x, z);
 
-        //This and any other things you may wish to add
+
         if (TerrainGen.populate(this, this.world, this.rand, x, z, false, PopulateChunkEvent.Populate.EventType.NETHER_LAVA))
         {
-            for (int k = 0; k < 8; ++k) { this.hellSpringGen.generate(this.world, this.rand, blockpos.add(this.rand.nextInt(16) + 8, this.rand.nextInt(120) + 4, this.rand.nextInt(16) + 8)); }
+            //for (int k = 0; k < 8; ++k) { this.hellSpringGen.generate(this.world, this.rand, blockpos.add(this.rand.nextInt(16) + 8, this.rand.nextInt(120) + 4, this.rand.nextInt(16) + 8)); }
         }
 
         if(generateStructures)

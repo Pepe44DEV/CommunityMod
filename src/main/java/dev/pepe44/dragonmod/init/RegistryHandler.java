@@ -3,6 +3,7 @@ package dev.pepe44.dragonmod.init;
 
 import dev.pepe44.dragonmod.DragonMod;
 import dev.pepe44.dragonmod.DragonModConstants;
+import dev.pepe44.dragonmod.blocks.BlockCaveStone;
 import dev.pepe44.dragonmod.blocks.BlockFountain;
 import dev.pepe44.dragonmod.commands.CommandTeleportDimension;
 import dev.pepe44.dragonmod.items.*;
@@ -33,6 +34,7 @@ public class RegistryHandler {
     @SubscribeEvent
     public static void addBlocks(RegistryEvent.Register<Block> event) {
         event.getRegistry().register(new BlockFountain().setRegistryName(DragonModConstants.MODID, "fountain").setCreativeTab(DragonMod.creativeTabb));
+        event.getRegistry().register(new BlockCaveStone().setRegistryName(DragonModConstants.MODID, "cavestone").setCreativeTab(DragonMod.creativeTabb));
     }
 
 
@@ -49,6 +51,7 @@ public class RegistryHandler {
         event.getRegistry().register(new ItemDragonBook().setRegistryName(DragonModConstants.MODID, "dragonbook"));
         event.getRegistry().register(new ItemBackpack().setRegistryName(DragonModConstants.MODID, "backpack"));
         event.getRegistry().register(new FlySuite (DragonMod.wings, EntityEquipmentSlot.CHEST).setRegistryName(DragonModConstants.MODID, "flysuite"));
+        event.getRegistry().register(new ItemBlock(cavestone).setRegistryName(DragonModConstants.MODID, "cavestone_block"));
 
     }
 

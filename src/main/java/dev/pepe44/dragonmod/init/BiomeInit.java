@@ -13,7 +13,7 @@ public class BiomeInit {
     public static final Biome DRAGON_CAVE = new biomes.BiomeDragonCave();
 ;
    public static void registerBiomes() {
-        initBiome(DRAGON_CAVE, "Dragon Cave", BiomeType.COOL, BiomeDictionary.Type.COLD, BiomeDictionary.Type.SPOOKY, BiomeDictionary.Type.DRY) ;
+        initBiome(DRAGON_CAVE, "DragonCave", BiomeType.COOL, BiomeDictionary.Type.COLD, BiomeDictionary.Type.SPOOKY, BiomeDictionary.Type.DRY) ;
    }
 
 

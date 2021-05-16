@@ -12,6 +12,7 @@ public class DimensionTheSecretWorld extends WorldProvider {
 
     public DimensionTheSecretWorld(){
         this.biomeProvider = new BiomeProviderSingle(BiomeInit.DRAGON_CAVE);
+        this.hasSkyLight = false;
     }
 
     @Override

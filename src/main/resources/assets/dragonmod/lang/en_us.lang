@@ -12,6 +12,7 @@ item.dragonmod.dragonbook.name=§l§6Dragon Book
 
 #Blocks
 tile.dragonmod.fountain.name=Fountain
+tile.dragonmod.cavestone.name=Cavestone
 
 #Entities
 entity.nightshade.name=Nightshade

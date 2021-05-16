@@ -1,6 +1,7 @@
 package dev.pepe44.dragonmod.init;
 
 import dev.pepe44.dragonmod.DragonModConstants;
+import dev.pepe44.dragonmod.blocks.BlockCaveStone;
 import dev.pepe44.dragonmod.blocks.BlockFountain;
 import dev.pepe44.dragonmod.items.*;
 import dev.pepe44.dragonmod.items.armor.ArmorDragonScale;
@@ -20,6 +21,7 @@ public class ObjectsHolder {
     public static final ItemDragonBook dragonbook = null;
     public static final ItemBackpack backpack = null;
     public static final FlySuite flysuite = null;
+    public static final BlockCaveStone cavestone = null;
 
 
 }
