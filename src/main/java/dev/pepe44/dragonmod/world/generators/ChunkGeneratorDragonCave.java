@@ -6,8 +6,6 @@ import java.util.Random;
 import javax.annotation.Nullable;
 
 import dev.pepe44.dragonmod.init.BiomeInit;
-import dev.pepe44.dragonmod.init.ObjectsHolder;
-import dev.pepe44.dragonmod.init.RegistryHandler;
 import net.minecraft.block.BlockFalling;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -25,7 +23,6 @@ import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraft.world.gen.MapGenBase;
 import net.minecraft.world.gen.MapGenCavesHell;
 import net.minecraft.world.gen.NoiseGeneratorOctaves;
-import net.minecraft.world.gen.feature.WorldGenHellLava;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.ForgeEventFactory;
 import net.minecraftforge.event.terraingen.ChunkGeneratorEvent.InitNoiseField;
